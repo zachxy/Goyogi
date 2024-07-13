@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const yogaClassButton = document.getElementById('yogaClass');
+    const yogaCoursesButton = document.getElementById('yogaCourses');
+
+    yogaClassButton.addEventListener('click', () => {
+        yogaCoursesButton.classList.toggle('hidden');
+        if (!yogaCoursesButton.classList.contains('hidden')) {
+            yogaCoursesButton.style.display = 'block';
+        } else {
+            yogaCoursesButton.style.display = 'none';
+        }
+    });
+
+    yogaCoursesButton.addEventListener('click', () => {
+        yogaClassButton.classList.toggle('hidden');
+        if (!yogaClassButton.classList.contains('hidden')) {
+            yogaClassButton.style.display = 'block';
+        } else {
+            yogaClassButton.style.display = 'none';
+        }
+    });
+});
